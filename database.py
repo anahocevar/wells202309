@@ -21,7 +21,9 @@ def query_db(depth_min, grad_min):
     return results
 
 if __name__ == '__main__':
-    depth_min = 2000
-    grad_min = 0.075
+    import sys
+
+    depth_min = float(sys.argv[1])
+    grad_min = float(sys.argv[2])
     print(query_db(depth_min, grad_min))
     
