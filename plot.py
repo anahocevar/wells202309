@@ -4,7 +4,7 @@ from vega_datasets import data
 
 
 def plot_wells(well_data):
-    df = pd.DataFrame(data, columns=["latitude", "longitude", "depth", "gradient"])
+    df = pd.DataFrame(well_data, columns=["latitude", "longitude", "depth", "gradient"])
     counties = alt.topo_feature(data.us_10m.url, 'counties')
 
     map_ = (
